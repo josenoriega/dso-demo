@@ -42,7 +42,7 @@ pipeline {
     stage('Docker BnP') {
       steps {
        container('kaniko') {
-         sh '/kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --cache=true --destination=docker.io/josenoriega/lfs262'
+         sh '/kaniko/executor -f $PWD/Dockerfile -c $PWD --insecure --skip-tls-verify --cache=true --destination=docker.io/josenoriega/lfs262'
      }
     }
    }
